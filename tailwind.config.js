@@ -15,4 +15,15 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
+  darkMode: "class",
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets.example.com",
+        port: "",
+        pathname: "/account123/**",
+      },
+    ],
+  },
 };
