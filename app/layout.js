@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light" className="max-w-7xl mx-auto">
       <body className={inter.className}>
-        <div className="">
+        <div className="mb-10">
           <a className="btn flex text-end">Dash Board</a>
         </div>
         {children}

@@ -6,14 +6,15 @@ import Google from "@/public/images/google.svg";
 import Linkedin from "@/public/images/linkedin.svg";
 import GitHub from "@/public/images/github.svg";
 
-export default function LoginPage() {
+export default function RegistrationPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
-    const number = form.elements.number.value;
+    const name = form.elements.name.value;
     const email = form.elements.email.value;
+    const number = form.elements.number.value;
     const password = form.elements.password.value;
-    console.log(number, email, password);
+    console.log(name, email, number, password);
   };
 
   return (
@@ -39,14 +40,14 @@ export default function LoginPage() {
                     htmlFor="email"
                     className="mb-2 dark:text-gray-400 text-lg"
                   >
-                    Number
+                    Name
                   </label>
                   <input
-                    id="number"
-                    name="number"
+                    id="name"
+                    name="name"
                     className="border p-3 dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 shadow-md placeholder:text-base focus:scale-105 ease-in-out duration-300 border-gray-300 rounded-lg w-full"
-                    type="number"
-                    placeholder="number"
+                    type="name"
+                    placeholder="Name"
                     required
                   />
                 </div>
@@ -62,7 +63,23 @@ export default function LoginPage() {
                     name="email"
                     className="border p-3 dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 shadow-md placeholder:text-base focus:scale-105 ease-in-out duration-300 border-gray-300 rounded-lg w-full"
                     type="email"
-                    placeholder="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="mb-2 dark:text-gray-400 text-lg"
+                  >
+                    Number
+                  </label>
+                  <input
+                    id="number"
+                    name="number"
+                    className="border p-3 dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 shadow-md placeholder:text-base focus:scale-105 ease-in-out duration-300 border-gray-300 rounded-lg w-full"
+                    type="number"
+                    placeholder="Number"
                     required
                   />
                 </div>
@@ -102,7 +119,7 @@ export default function LoginPage() {
                   Don,t have an account?
                   <a
                     className="group text-blue-400 transition-all duration-100 ease-in-out"
-                    href=""
+                    href="/"
                   >
                     <span className="bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                       Sign Up
